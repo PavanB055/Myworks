@@ -1,0 +1,212 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: linear-gradient(45deg, #e91e63 0%, #9c27b0 20%, #673ab7 40%, #3f51b5 60%, #2196f3 80%, #00bcd4 100%), linear-gradient(to right, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, transparent 100%);
+  }
+
+body {
+    /* background: #f3f3f3; */
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+p{
+    color: rgb(255, 255, 255);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.case-studies {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.case-study {
+    display: block;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.case-study:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.case-study:hover .icon {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.case-study:nth-child(1) .icon {
+    background: #4CAF50;
+    color: white;
+}
+
+.case-study:nth-child(2) .icon {
+    background: #2196F3;
+    color: white;
+}
+
+.case-study:nth-child(3) .icon {
+    background: #9C27B0;
+    color: white;
+}
+
+.case-study h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.case-study p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.details {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.case-study:focus .details {
+    display: block;
+}
+
+.details-content {
+    background: white;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.floating-element {
+    position: absolute;
+    pointer-events: none;
+    animation: float 3s ease-in-out infinite;
+}
+
+.pen {
+    top: 20px;
+    right: 40px;
+    font-size: 1.5rem;
+    transform-origin: center;
+}
+
+.magnifier {
+    bottom: 40px;
+    left: 30px;
+    font-size: 1.5rem;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+img {
+    display: block;
+}
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #0056b3;
+    transform: translateX(5px);
+}
+
+.explore-btn::after {
+    content: "→";
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.explore-btn:hover::after {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .case-studies {
+        grid-template-columns: 1fr;
+    }
+}
+.case-studies {
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

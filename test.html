@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Storytelling Websites</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    
+        .button-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            animation: float 2s ease-in-out infinite;
+        }
+    
+        .button-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        body {
+            background: url('https://i.pinimg.com/736x/49/04/8a/49048a1b85405ca2866cb142ebf11cf8.jpg') no-repeat center center/cover;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1, header p {
+            color: #fff;
+        }
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 30px;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee-content img {
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem auto;
+            padding: 1rem;
+            max-width: 1200px;
+        }
+
+        .button-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+        }
+
+        .button-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .button-card h3 {
+            margin-top: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Interactive Storytelling Websites</h1>
+    <p>Discover engaging, creative, and memorable interactive storytelling experiences.</p>
+</header>
+
+<div class="marquee-container">
+    <div class="marquee-content">
+        <img src="https://image.commarts.com/images1/3/3/4/1/143388_102_600_MTM3MjgyOTkyMS0xMDA5MDIzMDU4_f.jpg" alt="Storytelling 1">
+        <img src="https://cdn-luma.com/public/lumalabs.ai/june-12-launch-dream-machine-high-res/og-image.png" alt="Storytelling 2">
+        <img src="https://cssnectar.com/wp-content/uploads/2024/12/CSS-Nectar.png" alt="Storytelling 3">
+    </div>
+</div>
+
+
+<main class="container">
+    <div class="button-container">
+        <div class="button-card">
+            <img src="https://image.commarts.com/images1/3/3/4/1/143388_102_600_MTM3MjgyOTkyMS0xMDA5MDIzMDU4_f.jpg" alt="Welcome to Pine Point">
+            <h3>Welcome to Pine Point</h3>
+            <a href="test1.html" role="button">Explore</a>
+        </div>
+
+        <div class="button-card">
+            <img src="https://cdn-luma.com/public/lumalabs.ai/june-12-launch-dream-machine-high-res/og-image.png" alt="Dream Machine">
+            <h3>Dream Machine</h3>
+            <a href="test2.html" role="button">Explore</a>
+        </div>
+
+        <div class="button-card">
+            <img src="https://cssnectar.com/wp-content/uploads/2024/12/CSS-Nectar.png" alt="Polecat Interactive">
+            <h3>Polecat Interactive</h3>
+            <a href="test3.html" role="button">Explore</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>BY PAVAN N A SHETTY</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#styledDiv {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  transition: all 0.3s ease;
+}
+
+.controls {
+  margin-top: 20px;
+}
+

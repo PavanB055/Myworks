@@ -1,0 +1,132 @@
+/* DIV.LEFT and DIV.RIGHT (THE FLEX CONTAINERS) */
+/* ----------------------------------------------------- */
+
+div.left, 
+div.right {
+    background-color: white;
+    width: 100%;
+    width: 50%;
+    display: flex; /* General styling #1 */
+}
+
+div.right {
+    flex-direction: column; /* General styling #2 */
+}
+
+/* FLEX ITEMS */
+/* ----------------------------------------------------- */
+
+div > div {
+    margin: 2px;
+    text-align: center; /* General styling #3 */
+    padding: 5px; /* General styling #3 */
+}
+
+/* SECTION 1 */
+/* ----------------------------------------------------- */
+
+#s1 div > div {
+    background-color: lightblue;
+}
+
+#s1 div.left div:nth-child(4) { /* Section 1 #1 */
+    font-size: 2.2rem;
+}
+
+#s1 div.left div:nth-child(5),
+#s1 div.right div:nth-child(5) { /* Section 1 #2 */
+    font-size: 1.5rem;
+}
+
+#s1 div.left div,
+#s1 div.right div { /* Section 1 #5 */
+    flex-grow: 1;
+}
+
+/* SECTION 2 */
+/* ----------------------------------------------------- */
+
+#s2 div > div {
+    background-color: lightgreen;
+}
+
+#s2 div.left,
+#s2 div.right { /* Section 2 #1 */
+    flex-wrap: wrap;
+}
+
+#s2 div.left div,
+#s2 div.right div { /* Section 2 #5 */
+    flex-basis: 90px;
+}
+
+/* SECTION 3 */
+/* ----------------------------------------------------- */
+
+#s3 div > div {
+    background-color: lightgrey;
+}
+
+#s3 div.left div:first-child,
+#s3 div.right div:first-child { /* Section 3 #1 */
+    flex-basis: 50%;
+}
+
+/* SECTION 4 */
+/* ----------------------------------------------------- */
+
+#s4 div > div {
+    background-color: yellow;
+}
+
+#s4 div.left,
+#s4 div.right { /* Section 4 #1 */
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+}
+
+#s4 div.left div,
+#s4 div.right div { /* Section 4 #2 */
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+#s4 div.left div { /* Section 4 #3 */
+    flex-basis: 47%;
+}
+
+#s4 div.right div { /* Section 4 #4 */
+    flex-basis: 25%;
+    width: 50%;
+}
+
+#s4 div.left div:first-child { /* Section 4 #5 */
+    order: 2;
+}
+
+#s4 div.right div:last-child { /* Section 4 #6 */
+    order: -2;
+}
+
+/* Media Queries for Section 4 */
+@media screen and (max-width: 965px) { /* Section 4 #7 */
+    #s4 div.left div,
+    #s4 div.right div {
+        background-color: lightpink;
+        flex-basis: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 650px) { /* Section 4 #8 */
+    #s4 div.left div,
+    #s4 div.right div {
+        background-color: lightcoral;
+    }
+    #s4 div.right {
+        flex-wrap: nowrap;
+    }
+}

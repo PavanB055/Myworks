@@ -1,0 +1,124 @@
+/* BODY AND SECTIONS */
+/* ----------------------------------------------------- */
+body {
+    padding: 40px 10%;
+    background-color: rgb(235, 235, 235);
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+section > h2 {
+    text-align: center;
+    line-height: 1;
+    border-bottom: 1px solid black;
+    padding-bottom: 8px;
+}
+
+section > em {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+section > div {
+    margin: 10px;
+}
+
+#s1 > div { background-color: #FFFF00; }
+#s2 > div { background-color: #CDEAC0; }
+#s3 > div { background-color: #FFFAE3; }
+#s4 > div { background-color: #FF5964; }
+#s5 > div { background-color: #B8F3FF; }
+#s6 > div { background-color: #B298DC; }
+#s7 > div { background-color: #BDC696; }
+
+/* SECTION 1 */
+/* ----------------------------------------------------- */
+#s1 span {
+    background-color: yellow;
+    mix-blend-mode: difference;
+    margin-bottom: 2px;
+    height: 30px;
+}
+
+#s1 span > div :nth-child(2) {
+    display: inline-block;
+}
+
+#s1 span > div :nth-child(3),
+#s1 span > div :nth-child(4) {
+    display: block;
+}
+
+/* SECTION 2 */
+/* ----------------------------------------------------- */
+#s2 > div > span {
+    background-color: #CDEAC0;
+    mix-blend-mode: difference;
+}
+
+/* SECTION 3 */
+/* ----------------------------------------------------- */
+#s3 {
+    font-size: 24px;
+}
+
+/* SECTION 5 */
+/* ----------------------------------------------------- */
+#s5 > div:nth-of-type(1) {
+    position: static;
+}
+#s5 > div:nth-of-type(2) {
+    position: relative;
+}
+#s5 > div:nth-of-type(3) {
+    position: absolute; 
+    top: 15px; 
+    right: 20px;
+}
+#s5 > div:nth-of-type(4),
+#s5 > div:nth-of-type(5) {
+    position: static;
+}
+
+/* SECTION 6 */
+/* ----------------------------------------------------- */
+#s6 {
+    position: relative;
+}
+
+#s6 > div:nth-of-type(1) {
+    position: static;
+}
+#s6 > div:nth-of-type(2) {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+#s6 > div:nth-of-type(3) {
+    position: absolute;
+    left: -40px;
+}
+#s6 > div:nth-of-type(4),
+#s6 > div:nth-of-type(5) {
+    position: static;
+}
+
+/* SECTION 7 */
+/* ----------------------------------------------------- */
+#s7 > div:nth-of-type(1),
+#s7 > div:nth-of-type(2) {
+    content: "SEIZE THE DEFAULTS!";
+}
+
+#s7 > div:nth-of-type(3) {
+    content: "BE THE PROGRAMMER THAT YOU ALREADY ARE!";
+}

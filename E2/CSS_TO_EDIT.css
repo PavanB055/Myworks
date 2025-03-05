@@ -1,0 +1,161 @@
+/* BODY AND SECTIONS */
+/* ----------------------------------------------------- */
+
+body {
+    padding: 40px 10%;
+}
+
+/* General styling */
+h1 {
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section > p:first-child,
+div > p:first-child {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section,
+body > div {
+    margin: 50px 0;
+    padding-top: 20px;
+    border-top: 1px solid black;
+}
+
+::-moz-selection {
+    background: #yellow;
+    color: black;
+}
+
+::selection {
+    background: #yellow;
+    color: black;
+}
+
+/* Section 1 */
+section:nth-child(2) {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+section:nth-child(2):hover {
+    background-color: #f0f0f0;
+}
+
+/* Section 2 */
+section:nth-child(3) {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+section:nth-child(3):hover {
+    background-color: #f0f0f0;
+}
+
+/* Section 3 */
+section:nth-child(4) {
+    background-color: #f5f5f5;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+/* Section 4 */
+section:nth-child(5) {
+    margin-top: 100px;
+    border: 25px solid yellow;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+section:nth-child(5) ul:first-of-type li:nth-child(2) {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+}
+
+section:nth-child(5) ul:first-of-type:hover {
+    text-decoration: line-through;
+}
+
+section:nth-child(5) ul:nth-of-type(2) {
+    list-style: none;
+    margin-left: -20px;
+}
+
+section:nth-child(5) ul:nth-of-type(2) li::before {
+    content: "\261E";
+    margin-right: 10px;
+}
+
+section:nth-child(5) li:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Div 1 (top-level only) */
+body > div {
+    border: 1px solid black;
+    outline: 25px solid yellow;
+    padding-left: 40px;
+}
+
+body > div ol {
+    list-style: upper-roman;
+}
+
+body > div ol li {
+    margin-bottom: 20px;
+}
+
+/* Section 5 */
+section:nth-child(6) > p:first-child {
+    margin-bottom: 40px;
+}
+
+/* Override the general first-paragraph styling for the div's first paragraph */
+section:nth-child(6) div p:first-child {
+    font-size: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: left;
+}
+
+section:nth-child(6) div {
+    columns: 3;
+    column-gap: 50px;
+}
+
+section:nth-child(6) div p {
+    margin: 0;
+}
+
+section:nth-child(6) div p:not(:first-child) {
+    text-indent: 60px;
+}
+
+/* Section 6 */
+section:nth-child(7) p:nth-child(2)::first-line {
+    font-size: 44px;
+    line-height: 0.8;
+}
+
+section:nth-child(7) blockquote,
+section:nth-child(7) q {
+    color: #666;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-left: 1px solid black;
+}
+
+section:nth-child(7) blockquote {
+    margin-left: 30px;
+}
+
+section:nth-child(7) q {
+    border-right: 1px solid black;
+    margin-right: 10px;
+}
