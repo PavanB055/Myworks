@@ -1,12 +1,25 @@
-// Toggle function for Div 1 (Button 1 - using inline onclick attribute)
+// Function to toggle div1 visibility
 function toggleDiv1() {
-  let div1 = document.getElementById("div1");
-  div1.classList.toggle("hidden");
+    var div1 = document.getElementById("div1");
+    if (div1.style.display === "none") {
+        div1.style.display = "block"; // Show div1
+    } else {
+        div1.style.display = "none"; // Hide div1
+    }
 }
 
-// Toggle function for Div 2 (Button 2 - using event listener)
-document.getElementById("btn2").addEventListener("click", function () {
-  let div2 = document.getElementById("div2");
-  div2.classList.toggle("hidden");
-});
+// Function to toggle div2 visibility
+function toggleDiv2() {
+    var div2 = document.getElementById("div2");
+    if (div2.style.display === "none") {
+        div2.style.display = "block"; // Show div2
+    } else {
+        div2.style.display = "none"; // Hide div2
+    }
+}
 
+// Ensure div1 and div2 are visible by default when the page loads
+window.onload = function() {
+    document.getElementById("div1").style.display = "block";
+    document.getElementById("div2").style.display = "block";
+};
