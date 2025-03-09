@@ -1,65 +1,37 @@
-
-Conversation opened. 1 read message.
-
-Skip to content
-Using Vidyashilp University Mail with screen readers
-
-2 of 5,020
-E4
-Inbox
-
-KANCHANA T
-Attachments
-3:29 PM (18 minutes ago)
-to me
-
-// Toggle function for Div 1 (Button 1 - using inline onclick attribute)
-function toggleDiv1() {
-    let div1 = document.getElementById("div1");
-    div1.classList.toggle("hidden");
-}
-
-// Toggle function for Div 2 (Button 2 - using event listener)
-document.getElementById("btn2").addEventListener("click", function () {
-    let div2 = document.getElementById("div2");
-    div2.classList.toggle("hidden");
-});
-
- 2 Attachments
-  •  Scanned by Gmail
 body {
     font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
 
 button {
-    margin: 10px;
-    padding: 10px;
+    padding: 10px 20px;
+    margin-right: 10px;
     background-color: lightblue;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+}
+
+button:hover {
+    background-color: #a3d8f4;
 }
 
 div {
-    width: 200px;
-    height: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 100px;
+    margin-top: 20px;
+    padding: 50px;
     background-color: lightblue;
-    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: block; /* Default state: visible */
 }
 
+/* Optional: Add some spacing or styling */
 #div1 {
-    display: none; /* Hidden by default */
-}
-
-.hidden {
-    display: none !important;
+    width: 300px;
+    height: 200px;
 }
 
 #div2 {
-    display: block; /* Open by default */
+    width: 100%;
+    height: 100px;
 }
-styles.css
-Displaying E4 Js.html. 
