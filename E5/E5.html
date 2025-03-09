@@ -1,115 +1,70 @@
 <!doctype html>
 <html lang="en-GB">
-
 <head>
-
-    <!-- Metatags-->
     <meta charset="utf-8">
     <meta name="author" content="Author Name">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Interactive garden-themed page">
+    <meta name="keywords" content="javascript, css, html, interactive">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Luna's Garden</title>
     
-    <meta property="og:title" content="Page Title"/>
-	<meta property="og:type" content="website"/>
-    <meta property="og:description" content="Lorem ipsum dolor..."/>
-    <meta property="og:image" content=".jpg" />
-    <meta property="og:url" content=".htm" />
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content=".jpg">
-    <meta name="twitter:card" content=".jpg">
-    <link rel="shortcut icon" href=".png">
+    <meta property="og:title" content="Luna's Garden"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="An interactive webpage to explore JS inputs"/>
+    <meta property="og:image" content="lunas-garden-image.jpg" />
+    <meta property="og:url" content="https://example.com/lunas-garden.htm" />
+    <meta name="twitter:title" content="Luna's Garden">
+    <meta name="twitter:description" content="An interactive webpage to explore JS inputs">
+    <meta name="twitter:image" content="lunas-garden-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="shortcut icon" href="favicon.png">
 
-    <!-- Link to Stylesheet (CSS)-->
     <link href="./style.css" rel="stylesheet" type="text/css">
-    
-    <!-- Link to Script (JS)-->
     <script type="text/javascript" src="./script.js" defer></script>    
-
 </head>
-    
 <body>
-
-    <h3>Basic JS Interactions (contd.) –</h3>
+    <h3>Basic JS Interactions (continued)</h3>
     <h2>Inputs</h2>
     <hr>
-
     <div id="box1"></div>
 
-    <!-- Text Input -->
     <label for="textInput1">Enter Text here:</label>
     <input id="textInput1" type="text" value="HELLO" oninput="displayTextValue()">
-    
-    <br>
-    <br>
+    <br><br>
 
-    <!-- Number Input -->
     <label for="numberInput1">Enter Number here:</label>
     <input id="numberInput1" type="number" value="1" oninput="numberValue()">
-    
-    <br>
-    <br>
+    <br><br>
 
-    <!-- Radio Buttons -->
     <h4>Choose Font:</h4>
-
     <input type="radio" name="fontFamily" id="radioSerif" value="serif" onclick="changeFontSerif()">
-    <label for="radioSerif">Serif</label>
-    
-    <br>
-    
+    <label for="radioSerif">Serif</label><br>
     <input type="radio" name="fontFamily" id="radioSans" value="sans-serif" onclick="changeFontSans()">
-    <label for="radioSans">Sans-Serif</label>
-    
-    <br>
-    
+    <label for="radioSans">Sans-Serif</label><br>
     <input type="radio" name="fontFamily" id="radioMono" value="monospace" onclick="changeFontMono()">
     <label for="radioMono">Mono</label>
+    <br><br>
 
-    <br>
-    <br>
-
-    <!-- Range Slider Text Size-->
-    
     <label for="slider">Adjust Font Size</label>
-    <input type="range" name="" id="slider" min="12" max="108" onchange="adjustSize()">
-    
-    <br>
-    <br>
-    <br>
-    <!-- Range Slider Color-->
-        
-    <h4>Choose Color:</h4>
-    <br>
+    <input type="range" name="" id="slider" min="12" max="108" oninput="adjustSize()">
+    <br><br><br>
 
+    <h4>Choose Color:</h4><br>
     <label for="R">R</label>
-    <input type="range" name="color" id="R" min="0" max="255" onchange="adjustColor()">
-
+    <input type="range" name="color" id="R" min="0" max="255" oninput="adjustColor()">
     <label for="G">G</label>
-    <input type="range" name="color" id="G" min="0" max="255" onchange="adjustColor()">
-
+    <input type="range" name="color" id="G" min="0" max="255" oninput="adjustColor()">
     <label for="B">B</label>
-
-    <input type="range" name="color" id="B" min="0" max="255" onchange="adjustColor()">
-
-    <br>
-    <br>
-    <h4>OR</h4>
-    <br>
-
-    <!-- Select / Dropdown Menu-->
-
+    <input type="range" name="color" id="B" min="0" max="255" oninput="adjustColor()">
+    <br><br>
+    <h4>OR</h4><br>
     <select name="color" id="dropdown" onchange="chooseColor()">
-        <option value="red">Color 1</option>
-        <option value="green">Color 2</option>
-        <option value="blue">Color 3</option>
-        <option value="yellow">Color 4</option>
-        <option value="black">Color 5</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="black">Black</option>
     </select>
-
-
-</body>    
+</body>
 </html>
