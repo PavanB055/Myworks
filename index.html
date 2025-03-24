@@ -4,22 +4,147 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    nav li {
+      transition: transform 0.3s ease;
+    }
+
+    nav li:hover {
+      transform: translateY(-5px);
+    }
+
+    nav a {
+      display: block;
+      background: white;
+      padding: 1rem;
+      text-decoration: none;
+      color: #4a90e2;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #4a90e2;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      color: #4a90e2;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #4a90e2;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        grid-template-columns: 1fr;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Welcome to My Page</h1>
     <nav>
       <ul>
-        <li><a href="test.html">Assaignment 1</a></li>
-        <li><a href="E1\D6.E1 CSS Positions.html">Excercise 1</a></li>
-        <li><a href="E2\D3.E1 CSS Selectors.html">Excercise 2</a></li>
-        <li><a href="E3\D10.E1 CSS Flexbox & Media Queries.html">Excercise 3</a></li>
-        <li><a href="E4\E4.html">Excercise 4</a></li>
-        <li><a href="E5\E5.html">Excercise 5</a></li>
-        <li><a href="A2\Story telling website.pdf">Assaignment 2.1 The story plan</a></li>
-        <li><a href="A2\wireframe 2.pdf">Assaignment 2.2 The wireframe</a></li>
-        
+        <li><a href="test.html">Assignment 1</a></li>
+        <li><a href="E1\D6.E1 CSS Positions.html">Exercise 1</a></li>
+        <li><a href="E2\D3.E1 CSS Selectors.html">Exercise 2</a></li>
+        <li><a href="E3\D10.E1 CSS Flexbox & Media Queries.html">Exercise 3</a></li>
+        <li><a href="E4\E4.html">Exercise 4</a></li>
+        <li><a href="E5\E5.html">Exercise 5</a></li>
+        <li><a href="A2\Story telling website.pdf">Assignment 2.1 The Story Plan</a></li>
+        <li><a href="A2\wireframe 2.pdf">Assignment 2.2 The Wireframe</a></li>
       </ul>
     </nav>
   </header>
