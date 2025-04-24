@@ -1,163 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      min-height: 100vh;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    header {
-      background: #4a90e2;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: white;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    nav {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    nav ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    nav li {
-      transition: transform 0.3s ease;
-    }
-
-    nav li:hover {
-      transform: translateY(-5px);
-    }
-
-    nav a {
-      display: block;
-      background: white;
-      padding: 1rem;
-      text-decoration: none;
-      color: #4a90e2;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background: #4a90e2;
-      color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-    }
-
-    section {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-in;
-    }
-
-    h2 {
-      color: #4a90e2;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #4a90e2;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 600px) {
-      nav ul {
-        grid-template-columns: 1fr;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfterLife — Soul Onboarding System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My UI-UX Journey</h1>
-    <nav>
-      <ul>
-        <li><a href="test.html">Assignment 1</a></li>
-        <li><a href="E1\D6.E1 CSS Positions.html">Exercise 1</a></li>
-        <li><a href="E2\D3.E1 CSS Selectors.html">Exercise 2</a></li>
-        <li><a href="E3\D10.E1 CSS Flexbox & Media Queries.html">Exercise 3</a></li>
-        <li><a href="E4\E4.html">Exercise 4</a></li>
-        <li><a href="E5\E5.html">Exercise 5</a></li>
-        <li><a href="A2\Story telling website.pdf">Assignment 2.1 The Story Plan</a></li>
-        <li><a href="A2\wireframe 2.pdf">Assignment 2.2 The Wireframe</a></li>
-        <li><a href="A2\wireframe 2.pdf">Assignment 2</a></li>
-        <li><a href="A2\wireframe 2.pdf">Assignment 3</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>About This Website</h2>
-      <p>All the websites are interlinked to each other from this website</p>
-    </section>
-  </main>
-  <footer>
-    <p>Contains all the works done in this course.</p>
-  </footer>
+    <!-- Marquee Banner -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>Aatma's only remeber codes#@$56^7 and numbers.After Each person is dead from the earth will be assaigned to a unique OTP no, where the entire life history of that person is stored in 3D format<</span>
+            <span>Aatma's only remeber codes#@$56^7 and numbers.After Each person is dead from the earth will be assaigned to a unique OTP no, where the entire life history of that person is stored in 3D format<</span>
+        </div>
+    </div>
+
+    <!-- ADD GIF: Loading animation background -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <img src="images/giphy (2).gif" alt="Loading animation">
+        <p class="glitch-text">Initializing AfterLife ...</p>
+    </div>
+
+    <main id="screens-container">
+        <!-- Screen 1: Welcome -->
+        <div class="screen active" id="screen1">
+            <div class="glitch-container">
+                <h1 class="glitch-title" data-text="AfterLife OS">AfterLife Registration</h1>
+                <div class="subtitle-container">
+                    <p class="tagline glitch-subtitle" data-text="Your eternal journey begins here…">
+                        Your eternal journey begins here…
+                    </p>
+                    <p class="tagline glitch-subtitle" data-text="or ends where you decide.">
+                        or ends where you decide.
+                    </p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="cyber-button" onclick="nextScreen()">
+                    <span class="cyber-button__glitch">EXIT TO WELCOME</span>
+                    <span class="cyber-button__tag">OS v2.0.4</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Screen 2: Personality Calibration -->
+        <div class="screen" id="screen2">
+            <div class="screen-content">
+                <h2 class="glitch-title" data-text="Personality Calibration">Personality Calibration</h2>
+                <div class="marquee">
+                    <span>If soul Forgets OTP soul has to recall the name of their ex-love which is again a code $#%@ where the info about the person will be taken</span>
+                </div>
+                <div class="calibration-container">
+                    <div class="input-group">
+                        <label class="cyber-label">Enter Aatma OTP:</label>
+                        <input type="text" class="cyber-input" id="atmaOTP" placeholder="Enter your Atma OTP...">
+                        <p>How was your Life?</p>
+                    </div>
+                    <div class="personality-traits">
+                        <button onclick="choosePath('regret')" class="cyber-button trait-btn">REGRET</button>
+                        <button onclick="choosePath('proud')" class="cyber-button trait-btn">PROUD</button>
+                        <button onclick="choosePath('forgetful')" class="cyber-button trait-btn">FORGETFUL</button>
+                    </div>
+                    <div class="ex-code-section">
+                        <input type="text" class="cyber-input" id="exCode" placeholder="Enter your ex-code if OTP forgotten...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3: Atma Identification -->
+        <div class="screen" id="screen3">
+            <div class="screen-content">
+                <div class="cyber-card">
+                    <h2 class="glitch-title" data-text="ATMA IDENTIFICATION">ATMA IDENTIFICATION</h2>
+                    <div class="card-content" id="atma-details"></div>
+                    <p class="cyber-notice">All atmas look the same -We don't discriminate></p>
+                </div>
+                <button class="cyber-button" onclick="nextScreen()">CONTINUE</button>
+            </div>
+        </div>
+
+        <!-- Screen 4: Truth Assessment -->
+        <div class="screen" id="screen4">
+            <div class="screen-content">
+                <h2 class="glitch-title" data-text="TRUTH ASSESSMENT">TRUTH ASSESSMENT</h2>
+                <div class="marquee">
+                    <span>Surrender Yourself to the truth - The AfterLife OS will assess your karma.</span>
+                </div>
+                <div class="karma-grid" id="karma-checks"></div>
+                <textarea class="cyber-textarea" id="confession" placeholder="Confess your sins..."></textarea>
+                <button class="cyber-button" onclick="processKarma()">SUBMIT TRUTH</button>
+            </div>
+        </div>
+
+        <!-- Screen 5: Karma Chart -->
+        <div class="screen" id="screen5">
+            <div class="screen-content">
+                <div class="cyber-chart-container">
+                    <canvas id="karma-chart"></canvas>
+                </div>
+                <div id="destiny-result" class="glitch-text"></div>
+                <button class="cyber-button" onclick="nextScreen()">ACCEPT FATE</button>
+            </div>
+        </div>
+
+        <!-- Screen 6: Final Decree -->
+<div class="screen" id="screen6">
+    <div class="screen-content">
+        <div id="final-decree" class="glitch-text"></div>
+        <div id="next-life-container">
+            <div id="species-assignment"></div>
+            <div id="next-life-image"></div>
+        </div>
+        <button class="cyber-button" onclick="nextScreen()">PROCEED TO NEXT LIFE</button>
+    </div>
+</div>
+
+        <!-- Screen 7: Final Assessment + p5 canvas -->
+        <div class="screen" id="screen7">
+            <div class="screen-content">
+                <h2 class="glitch-title" data-text="FINAL ASSESSMENT">FINAL ASSESSMENT</h2>
+                <div class="rating-container">
+                    <p class="cyber-notice">Rate your willing to Return</p>
+                    <input type="range" class="cyber-range" id="rating" min="1" max="10" value="5">
+                    <span id="rating-value" class="cyber-value">5</span>
+                    <button class="cyber-button" onclick="submitRating()">SUBMIT RATING</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 8: Error 404 -->
+        <div class="screen" id="screen8">
+            <div class="screen-content">
+                <div class="error-container">
+                    <h2 class="glitch-title error-text" data-text="ERROR 404">ERROR 404</h2>
+                    <p class="glitch-subtitle">Destination not found - The soul is lying</p>
+                    <button class="cyber-button error-btn" onclick="restartCycle()">RESTART CYCLE</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+    <script src="sketch.js" defer></script>
 </body>
 </html>
