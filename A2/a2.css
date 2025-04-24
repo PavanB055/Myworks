@@ -1,0 +1,44 @@
+/* Fonts */
+/* ------------------------------------------------- */
+
+@font-face  {
+  font-family: 'Font Name';
+  src: url('./fonts/font-name.eot');
+  src: url('./fonts/font-name.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/font-name.woff2') format('woff2'),
+       url('./fonts/font-name.woff') format('woff'),
+       url('./fonts/font-name.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  }
+  
+  
+  /* CSS Resets */
+  /* ------------------------------------------------- */
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 300vh; /* Makes the page long enough to scroll */
+    overflow-x: hidden;
+  }
+  
+  .video-container {
+    position: fixed; /* Keeps the video in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the screen */
+  }
